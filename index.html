@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e0c3fc, #8ec5fc);
+    text-align: center;
+    color: #333;
+}
+header {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(236, 229, 11, 0.1);
+    border-radius: 20px;
+    margin: 10px auto;
+    width: 90%;
+    text-align: center;
+   
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+nav ul li a.active, nav ul li a:hover {
+    background: #951773;
+}
+.hero {
+    padding: 4rem 0;
+}
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.about {
+    padding: 4rem 0;
+}
+.about-img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background: #ccc;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.experience-section {
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Experience Card */
+.experience-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Text Styles */
+.experience-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.company {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+}
+
+.social-icons a {
+    color: #080361;
+    font-size: 2em;
+    margin: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #833047;
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+.contact-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ad7f7f;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #0c1221;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button i {
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: #23272f;
+}
+
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="profile">
+            <img src="../image/myprofile.jpg" alt="Profile Picture">
+        </div>
+        <h1>Hi, I'm Ratha.</h1>
+        <p><em>Student at Royal University of Phnom Penh</em>, One day I will be a Web developer. I'm always on the lookout for new things to try.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src="../image/រដ្ឋា.jpg" alt="About Me Image" class="about-img">
+        <p>I am a student at the Royal University of Phnom Penh.My major is Computer Science. I am currently studying and don't have a work.</p>
+    </section>
+
+  
+    <section id="Education"class="Education">
+        <h2>Education</h2>
+        <div class="Education">
+            <h3><strong>Hight School</strong></h3>
+            <p class="school">BUN RANY HUN SEN ROLEA BIEA HIGHT SCHOOL</p>
+            <p class="description">
+                I studied at this school from grade 7 to grade 12. 
+            </p>
+            <p class="date">2016 -  2022</p>
+        </div>
+
+        <div class="">
+            <h3><strong>University</strong></h3>
+            <p class="school">ROYAL UNIVERSITY OF PHNOM PENH</p>
+            <p class="description">
+                I start attending this university in 2022. And I chose the Computer Science and Engineering. I have been studying until now, in 2025.And now I am a student year 3 at the University of Phnom Penh.
+            </p>
+            <p class="date"> 2022 - Present</p>
+        </div>
+    </section>
+    <section id="Experience"class="Experience">
+        <h2>Experience</h2>
+        <div class="Education">
+           <p>I joint as a volunteer at Royal university of Phnom Penh.</p>
+           <p>I joint as a volunteer of Union of Youth Federations of Cambodia.</p>
+           <p>I joint as a volunteer of Celebrating Cambodia.</p>
+        </div>
+
+        
+
+    <section id="skills"class="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Java</div>
+            <div class="skill">JavaScript</div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out to me at <a href="mailto:contact@phonratha22003@mail.com">contact@phonratha22003@gmail.com</a> or through the form below.</p>
+        
+        <form class="contact-form">
+            <input type="email" placeholder="Your email" required>
+            <textarea rows="4" placeholder="Your message" required></textarea>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>
+
